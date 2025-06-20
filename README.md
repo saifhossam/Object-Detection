@@ -1,10 +1,10 @@
-# 🛡️ Hard Hat Detection using Computer Vision
+# Hard Hat Detection using Computer Vision
 
 This project focuses on **enhancing occupational safety** by automating the detection of **Personal Protective Equipment (PPE)**, specifically hard hats, using computer vision techniques. It addresses the challenges of manual safety monitoring on construction and industrial sites.
 
 ---
 
-**📌 Motivation**
+**Motivation**
 
 * **Enhance Worker Safety**: Construction sites pose high risks of head injuries.
 * **Reduce Human Error**: Manual PPE monitoring is inconsistent and error-prone.
@@ -12,7 +12,7 @@ This project focuses on **enhancing occupational safety** by automating the dete
 
 ---
 
-**📁 Dataset: Hard Hat Detection**
+**Dataset: Hard Hat Detection**
 
 * **5000 real-world annotated images** from construction/industrial sites.
 * Each image includes bounding boxes for: `head`, `helmet`, `person`.
@@ -21,11 +21,11 @@ This project focuses on **enhancing occupational safety** by automating the dete
 
 ---
 
-**🧠 System Pipeline Overview**
+**System Pipeline Overview**
 
 ---
 
-**1. 🔧 Preprocessing**
+**1. Preprocessing**
 
 * **Resizing**: 416×416 (standard for object detection)
 * **Normalization**: Scale pixel values to \[0,1]
@@ -38,7 +38,7 @@ This project focuses on **enhancing occupational safety** by automating the dete
 
 ---
 
-**2. ✂️ Segmentation**
+**2. Segmentation**
 
 * **Binary & Otsu Thresholding**: Pixel-based segmentation
 * **Canny Edge Detection**: Highlights object boundaries
@@ -47,19 +47,19 @@ This project focuses on **enhancing occupational safety** by automating the dete
 
 ---
 
-**3. 📄 Annotation Parsing (XML)**
+**3. Annotation Parsing (XML)**
 
 * Extracted: `filename`, `image size`, and object labels with bounding boxes.
 
 ---
 
-**4. 📸 Visualization**
+**4. Visualization**
 
 * Drew bounding boxes with color-coded labels (`head`, `helmet`, `person`).
 
 ---
 
-**5. 🧬 Feature Extraction**
+**5. Feature Extraction**
 
 * **3D Color Histograms** using OpenCV
 * ROI resized to 64×64 → flattened feature vector
@@ -70,14 +70,14 @@ This project focuses on **enhancing occupational safety** by automating the dete
 
 ---
 
-**6. 📊 Classification**
+**6. Classification**
 
 * **Random Forest / KNN**: Effective with structured features (color histograms)
 * **CNN**: Learns features directly from raw images
 
 ---
 
-**✅ Final Output**
+**Final Output**
 
 * Labeled images with bounding boxes
 * Classified objects: Head | Helmet | Person
@@ -85,7 +85,7 @@ This project focuses on **enhancing occupational safety** by automating the dete
 
 ---
 
-**🔗 License**
+**License**
 
 This project uses an open-source dataset and is licensed under MIT for educational and non-commercial use.
 
